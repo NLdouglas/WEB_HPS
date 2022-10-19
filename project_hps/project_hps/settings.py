@@ -55,7 +55,7 @@ ROOT_URLCONF = 'project_hps.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR, 'templates'],
+        'DIRS': [BASE_DIR, 'templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,10 +116,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = 'static'
+STATIC_URL = '/staticfiles/'
+STATIC_ROOT = 'staticfiles'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'bootstrap-5.0.2-dist')
+    os.path.join(BASE_DIR, 'static')
 ]
 
 # Default primary key field type
